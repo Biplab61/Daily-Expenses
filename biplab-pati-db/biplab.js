@@ -43,24 +43,25 @@
          }
          
          
-         
-          //   Date Checker and Picker Js
+                  //   Date Checker and Picker Js
        
-               var date = new Date();
+          var date = new Date();
                var tdate = date.getDate();
                var mintDate = date.getDate()-1;
                var month = date.getMonth()+1;
                if(tdate<10){
                    tdate = '0' + tdate;
                }
-               if(tdate<10){
-                   month = '0' + tdate;
+               if(mintDate<10){
+                   mintDate = '0' + mintDate;
+               }
+               if(month<10){
+                   month = '0' + month;
                }
                var year = date.getFullYear();
                
                var minDate = year + '-' + month + '-' + tdate;
-               var mintiDate = year + '-' + month + '-' + mintDate;
-               document.getElementById("Date-Checker-Picker").setAttribute('min',mintiDate);
+               var lowDate = year + '-' + month + '-' + mintDate;
+               document.getElementById("Date-Checker-Picker").setAttribute('min',lowDate);
                document.getElementById("Date-Checker-Picker").value = minDate;
                document.getElementById("Date-Checker-Picker").setAttribute('max',minDate);
-         

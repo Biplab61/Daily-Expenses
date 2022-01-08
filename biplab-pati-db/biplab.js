@@ -42,12 +42,14 @@
             document.write("<center><h1>Comming Soon!<h1></center>")
          }
 
-         function dis(){
-             document.getElementById("disable").disabled = true;
-             setTimeout(function(){
-                document.getElementById("disable").disabled = false;
-             }, 10000);
-         }
+          function dis(){
+            setTimeout(function(){
+                document.getElementById("disable").disabled = true;
+            },500);
+            setTimeout(function(){
+               document.getElementById("disable").disabled = false;
+            }, 20000);
+        }
          
          
                   //   Date Checker and Picker Js
